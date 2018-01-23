@@ -1,0 +1,42 @@
+---
+title: "Multi-Word Structural Topic Modelling of Tor Drug Marketplaces"
+author: |
+  | Mario Santoro and Stefano Guarino
+output:
+  revealjs::revealjs_presentation:
+    self_contained: false
+    reveal_plugins: ["notes", "zoom"]
+    theme: serif
+    transition: convex
+    highlight: pygments
+---
+# cazz
+
+
+# R Markdown
+
+##   
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+# others  
+
+## Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## Slide with R Code and Output
+
+```{r}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
