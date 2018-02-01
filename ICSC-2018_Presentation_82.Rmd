@@ -27,6 +27,20 @@ output:
     defaultTiming: 120
 ---
 
+## Just a Summary {data-background="img/Wake_Up_480.mp4"} 
+
+- Scope: Help Italian Investigators on ToR Drugs Marketplaces
+<br>
+- Using Topic Model:  
+
+   + Base  Structural Topic Model  
+   + Our Extension : **from Bag of Words to Bag of N-grams**    
+   + The Algorithm
+<br>
+- Some Results 
+<br>
+- Conclusions
+  
 # Scope 
 <!-- {data-background="img/Wake_Up.gif" data-background-position="bottom" data-background-size="70%"}   -->
     
@@ -178,9 +192,9 @@ of any number of words)
 
 - Let $|W|$ be the total number of tokens and $|D|$ the number of documents 
 <br>  
-- F is the $|W| × K$ matrix whose entry F_{l,t} is the FREX score of token $w_l$ with respect to topic $t$  
+- $F$ is the $|W| × K$ matrix whose entry F_{l,t} is the FREX score of token $w_l$ with respect to topic $t$  
 <br>
-- P is the $K × |D|$ matrix whose entry $P_{t,j}$ is the probability of topic $t$ appearing in document $d_j$  
+- $P$ is the $K × |D|$ matrix whose entry $P_{t,j}$ is the probability of topic $t$ appearing in document $d_j$  
 <br>
 - The product $S = F·P$ yields a $|W| × |D|$ matrix whose entry $S_{l,j}$ is a score of the relevance of word $w_l$ in document $d_j$  
 
@@ -324,21 +338,28 @@ to provide a reasonable trade-off among the four metrics
  ![](img/og_kush.jpg){width=45%}  
 </div>  
 
-# Conclusions {data-background="img/2001_ending.gif"}
+# Conclusions and Future Works {data-background="img/2001_ending.gif"}
   
 ## Conclusions {data-background="img/inception_end.gif"}
   
-> - As an exploratory approach we opted for an ad-hoc heuristic based on iteratively apply standard STM to detect topic-relevant term-pairs and merge them into a single extended-word.  
+> - As an exploratory approach we opted for an ad-hoc heuristic based on iteratively apply standard STM to detect topic-relevant term-pairs and merge them into a single extended-word 
   
-> - The coherence and the intelligibility of the obtained topics were significantly enhanced. 
+> - The coherence and the intelligibility of the obtained topics were significantly enhanced 
 
-> - Through a fine-grained and cross-market analysis of the thematic organization of the corpus we were able to gain relevant information about drug
-trade on ToR that goes well beyond those provided by the already available high level content classification.
+> - Through a fine-grained and cross-market analysis of the thematic organization of the corpus we were able to gain relevant information about drug trade on ToR that goes well beyond those provided by the already available high level content classification
+  
+  
+## Future Works {data-background="img/sherlock2.gif"}
+  
+> - Extend the *a priori* joint distributions to the N-grams and to the skip-grams
+<br>
+> - Increase performances
+<br>
+> - Now all is running on CPU on R -> GPU version  also using R (RCuda package)
 
+# ... this is the END {data-background="img/time_machine.gif"}
 
-#  {data-background="img/truman_show_end.gif"}
-
-## {data-background="img/truman_show_end.gif"}
+## THANKS!!! {data-background="img/truman_show_end.gif"}
 
 [github.com/santoroma/ICSC-2018_Presentation_82](http://github.com/santoroma/ICSC-2018_Presentation_82)
  

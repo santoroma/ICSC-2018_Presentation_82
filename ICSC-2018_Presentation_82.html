@@ -460,6 +460,20 @@ Stefano Guarino <sup><small>1</small></sup> and <ins>Mario Santoro</ins><sup><sm
 <small>12th IEEE International Conference on Semantic Computing</small></div></h2>
 </section>
 
+<section id="just-a-summary" class="slide level2" data-background="img/Wake_Up_480.mp4">
+<h2>Just a Summary</h2>
+<ul>
+<li>Scope: Help Italian Investigators on ToR Drugs Marketplaces <br></li>
+<li><p>Using Topic Model:</p></li>
+<li>Base Structural Topic Model<br />
+</li>
+<li>Our Extension : <strong>from Bag of Words to Bag of N-grams</strong><br />
+</li>
+<li>The Algorithm <br></li>
+<li>Some Results <br></li>
+<li><p>Conclusions</p></li>
+</ul>
+</section>
 <section><section id="scope" class="titleslide slide level1"><h1>Scope</h1></section><section id="iancis-isec-project" class="slide level2" data-background="img/spiderman.gif">
 <h2>IANCIS ISEC Project</h2>
 <p><small></p>
@@ -579,9 +593,9 @@ Goal number 1
 <ul>
 <li>Let <span class="math inline">\(|W|\)</span> be the total number of tokens and <span class="math inline">\(|D|\)</span> the number of documents <br><br />
 </li>
-<li>F is the <span class="math inline">\(|W| × K\)</span> matrix whose entry F_{l,t} is the FREX score of token <span class="math inline">\(w_l\)</span> with respect to topic <span class="math inline">\(t\)</span><br />
+<li><span class="math inline">\(F\)</span> is the <span class="math inline">\(|W| × K\)</span> matrix whose entry F_{l,t} is the FREX score of token <span class="math inline">\(w_l\)</span> with respect to topic <span class="math inline">\(t\)</span><br />
 <br></li>
-<li>P is the <span class="math inline">\(K × |D|\)</span> matrix whose entry <span class="math inline">\(P_{t,j}\)</span> is the probability of topic <span class="math inline">\(t\)</span> appearing in document <span class="math inline">\(d_j\)</span><br />
+<li><span class="math inline">\(P\)</span> is the <span class="math inline">\(K × |D|\)</span> matrix whose entry <span class="math inline">\(P_{t,j}\)</span> is the probability of topic <span class="math inline">\(t\)</span> appearing in document <span class="math inline">\(d_j\)</span><br />
 <br></li>
 <li>The product <span class="math inline">\(S = F·P\)</span> yields a <span class="math inline">\(|W| × |D|\)</span> matrix whose entry <span class="math inline">\(S_{l,j}\)</span> is a score of the relevance of word <span class="math inline">\(w_l\)</span> in document <span class="math inline">\(d_j\)</span></li>
 </ul>
@@ -715,20 +729,27 @@ Goal number 1
 <p><img src="img/shatter_sativa.jpg" style="width:45.0%" /> <img src="img/og_kush.jpg" style="width:45.0%" /></p>
 </div>
 </section></section>
-<section><section id="conclusions" class="titleslide slide level1" data-background="img/2001_ending.gif"><h1>Conclusions</h1></section><section id="conclusions-1" class="slide level2" data-background="img/inception_end.gif">
+<section><section id="conclusions-and-future-works" class="titleslide slide level1" data-background="img/2001_ending.gif"><h1>Conclusions and Future Works</h1></section><section id="conclusions" class="slide level2" data-background="img/inception_end.gif">
 <h2>Conclusions</h2>
 <ul>
-<li class="fragment">As an exploratory approach we opted for an ad-hoc heuristic based on iteratively apply standard STM to detect topic-relevant term-pairs and merge them into a single extended-word.</li>
+<li class="fragment">As an exploratory approach we opted for an ad-hoc heuristic based on iteratively apply standard STM to detect topic-relevant term-pairs and merge them into a single extended-word</li>
 </ul>
 <ul>
-<li class="fragment">The coherence and the intelligibility of the obtained topics were significantly enhanced.</li>
+<li class="fragment">The coherence and the intelligibility of the obtained topics were significantly enhanced</li>
 </ul>
 <ul>
-<li class="fragment">Through a fine-grained and cross-market analysis of the thematic organization of the corpus we were able to gain relevant information about drug trade on ToR that goes well beyond those provided by the already available high level content classification.</li>
+<li class="fragment">Through a fine-grained and cross-market analysis of the thematic organization of the corpus we were able to gain relevant information about drug trade on ToR that goes well beyond those provided by the already available high level content classification</li>
+</ul>
+</section><section id="future-works" class="slide level2" data-background="img/sherlock2.gif">
+<h2>Future Works</h2>
+<ul>
+<li class="fragment">Extend the <em>a priori</em> joint distributions to the N-grams and to the skip-grams <br></li>
+<li class="fragment">Increase performances <br></li>
+<li class="fragment">Now all is running on CPU on R -&gt; GPU version also using R (RCuda package)</li>
 </ul>
 </section></section>
-<section><section id="section-3" class="titleslide slide level1" data-background="img/truman_show_end.gif"><h1></h1></section><section id="section-4" class="slide level2" data-background="img/truman_show_end.gif">
-<h2></h2>
+<section><section id="this-is-the-end" class="titleslide slide level1" data-background="img/time_machine.gif"><h1>… this is the END</h1></section><section id="thanks" class="slide level2" data-background="img/truman_show_end.gif">
+<h2>THANKS!!!</h2>
 <p><a href="http://github.com/santoroma/ICSC-2018_Presentation_82">github.com/santoroma/ICSC-2018_Presentation_82</a></p>
 </section></section>
     </div>
