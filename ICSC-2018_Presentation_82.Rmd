@@ -52,11 +52,9 @@ output:
 
 - Indexing of Anonimous Networks for Crime Information Search
 <br>
-- We performed a complete crawling
-of four famous ToR drug marketplaces: Alphabay, Crypto Market, East India and Nucleus
+- We performed a complete crawling of four famous ToR drug marketplaces: Alphabay, Crypto Market, East India and Nucleus
 <br>
-- Marketplaces composed of pages advertising some item for sale
- and grouped by category
+- Marketplaces composed of pages advertising some item for sale and grouped by category
 <br>
 - We generated a corpus of documents for which covariate information (the market and the category) are immediately available
 <br>
@@ -105,22 +103,19 @@ distributions to potentially affect both topical prevalence and topical content.
 <br>
 > - Only focusing on unigrams frequencies
 <br>
-> -  Inability to detect topical multi-word expressions (phrasemes) <br>
+> -  Inability to detect topical multi-word expressions (phrasemes)
+<br>
 > - Difficulty in visualizing/interpreting the obtained topics
 <br>
-> - For example we can build a corpus of texts speaking a lot of:
-United States, United Arab Emirates, United Kingdom, United Nations
+> - For example we can build a corpus of texts speaking a lot of: United States, United Arab Emirates, United Kingdom, United Nations
 <br>
-> - Running a topic (1-gram) model can generate topic like that:
-united, president, election, arab, nations, states, kingdom, emirates
+> - Running a topic (1-gram) model can generate topic like that: united, president, election, arab, nations, states, kingdom, emirates
 <br>
 > - Is united referring to? UAE? USA? UK? UN?
 <br>
 > - Taking into account phrasemes can generate topic content like that: united_arab_emirates, arab_nations, president_election, kingdom
 
 </small>
-
-
 
 # Our Extended STM {data-background="img/Extended_STM.gif"}
 
@@ -152,11 +147,11 @@ relevant compound terms emerge
 <br>
 - Step zero is preprocessing:
     <br>
-    1. removing special characters and forcing to lowercase
+    1. Removing special characters and forcing to lowercase
     <br>
-    2. tokenizing the string into words
+    2. Tokenizing the string into words
     <br>
-    3. removing stop-words (i.e., function words, auxiliary/lexical verbs, adverbs/adjectives, file extensions, ...)
+    3. Removing stop-words (i.e., function words, auxiliary/lexical verbs, adverbs/adjectives, file extensions, ...)
     <br>
     4. Each document is formatted as an ordered list $d_j = (w_j^1,\ldots,w_j^{n_j})$
 
