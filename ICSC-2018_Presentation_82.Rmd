@@ -27,22 +27,23 @@ output:
     defaultTiming: 120
 ---
 
-## Just a Summary {data-background="img/Wake_Up_480.mp4"} 
+## Just a Summary{data-background="img/mars.gif"} 
 
-- Scope: Help Italian Investigators on ToR Drugs Marketplaces
+- Scope: Help Italian Investigators on ToR Drugs Marketplaces  
 <br>
-- Using Topic Model:  
+- Using Topic Model:    
 
-   + Base  Structural Topic Model  
-   + Our Extension : **from Bag of Words to Bag of N-grams**    
-   + The Algorithm
+    + Base  Structural Topic Model
+    <br>
+    + Our Extension : **from Bag of Words to Bag of N-grams**
+    <br>
+    + The Algorithm   
 <br>
-- Some Results 
+- Some Results   
 <br>
 - Conclusions
   
-# Scope 
-<!-- {data-background="img/Wake_Up.gif" data-background-position="bottom" data-background-size="70%"}   -->
+# Scope: Help Italian Investigators on ToR Drugs Marketplaces  {data-background="img/sherlok_scope.gif"}
     
     
 ## IANCIS ISEC Project  {data-background="img/spiderman.gif"}
@@ -349,7 +350,7 @@ to provide a reasonable trade-off among the four metrics
 > - Through a fine-grained and cross-market analysis of the thematic organization of the corpus we were able to gain relevant information about drug trade on ToR that goes well beyond those provided by the already available high level content classification
   
   
-## Future Works {data-background="img/sherlock2.gif"}
+## Future Works {data-background="img/time_machine.gif"}
   
 > - Extend the *a priori* joint distributions to the N-grams and to the skip-grams
 <br>
@@ -357,7 +358,7 @@ to provide a reasonable trade-off among the four metrics
 <br>
 > - Now all is running on CPU on R -> GPU version  also using R (RCuda package)
 
-# ... this is the END {data-background="img/time_machine.gif"}
+# ... this is the END {data-background="img/truman_show_end.gif"}
 
 ## THANKS!!! {data-background="img/truman_show_end.gif"}
 
