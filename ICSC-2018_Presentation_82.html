@@ -468,7 +468,8 @@ Stefano Guarino <sup><small>1</small></sup> and <ins>Mario Santoro</ins><sup><sm
 <ul>
 <li>Base Structural Topic Model <br></li>
 <li>Our Extension : <strong>from Bag of Words to Bag of N-grams</strong> <br></li>
-<li>The Algorithm <br></li>
+<li>The Algorithm <br><br />
+</li>
 </ul></li>
 <li>Some Results <br></li>
 <li><p>Conclusions</p></li>
@@ -478,14 +479,20 @@ Stefano Guarino <sup><small>1</small></sup> and <ins>Mario Santoro</ins><sup><sm
 <h2>IANCIS ISEC Project</h2>
 <p><small></p>
 <ul>
-<li>Indexing of Anonimous Networks for Crime Information Search <br></li>
-<li>We performed a complete crawling of four famous ToR drug marketplaces: Alphabay, Crypto Market, East India and Nucleus <br></li>
-<li>Marketplaces composed of pages advertising some item for sale and grouped by category <br></li>
-<li>We generated a corpus of documents for which covariate information (the market and the category) are immediately available <br></li>
+<li>Indexing of Anonimous Networks for Crime Information Search <br><br />
+</li>
+<li>We performed a complete crawling of four famous ToR drug marketplaces: Alphabay, Crypto Market, East India and Nucleus <br><br />
+</li>
+<li>Marketplaces composed of pages advertising some item for sale and grouped by category <br><br />
+</li>
+<li>We generated a corpus of documents for which covariate information (the market and the category) are immediately available <br><br />
+</li>
 <li><p>Goals for the IANCIS project:</p>
 <ol type="1">
-<li>Understand if there is any difference between markets/categories <br></li>
-<li>Verify the presence of context-specific idioms and a topical slang <br></li>
+<li>Understand if there is any difference between markets/categories <br><br />
+</li>
+<li>Verify the presence of context-specific idioms and a topical slang <br><br />
+</li>
 </ol></li>
 <li><p>Topic Model (TM) can be a natural choice in order to analyze the corpus <br></p></li>
 </ul>
@@ -495,14 +502,16 @@ Stefano Guarino <sup><small>1</small></sup> and <ins>Mario Santoro</ins><sup><sm
 <h2>Structural Topic Model (STM)</h2>
 <!-- > Structural Topic Modelling is a recent extension to TM  -->
 <ul>
-<li class="fragment">STM allows incorporating tags, categories, metadata and other information accompanying the text archive <br></li>
+<li class="fragment">STM allows incorporating tags, categories, metadata and other information accompanying the text archive <br><br />
+</li>
 <li class="fragment">STM uses covariate information to parametrize the prior distributions to potentially affect both topical prevalence and topical content.
 <div class="fragment current-visible">
 <div class="highlight-red">
 Goal number 1
 </div>
 </div>
-<br></li>
+<br><br />
+</li>
 <li class="fragment">STM use the Bag Of Word approach
 <div class="fragment current-visible">
 <div class="highlight-red">
@@ -519,13 +528,20 @@ Goal number 1
 <h2>Bag Of Words (BOW) Recap</h2>
 <p><small></p>
 <ul>
-<li class="fragment">Bag Of Words (BOW) paradigm: documents are viewed as a multisets of words, ignoring grammar and syntax <br></li>
-<li class="fragment">Only focusing on unigrams frequencies <br></li>
-<li class="fragment">Inability to detect topical multi-word expressions (phrasemes) <br></li>
-<li class="fragment">Difficulty in visualizing/interpreting the obtained topics <br></li>
-<li class="fragment">For example we can build a corpus of texts speaking a lot of: United States, United Arab Emirates, United Kingdom, United Nations <br></li>
-<li class="fragment">Running a topic (1-gram) model can generate topic like that: united, president, election, arab, nations, states, kingdom, emirates <br></li>
-<li class="fragment">Is united referring to? UAE? USA? UK? UN? <br></li>
+<li class="fragment">Bag Of Words (BOW) paradigm: documents are viewed as a multisets of words, ignoring grammar and syntax <br><br />
+</li>
+<li class="fragment">Only focusing on unigrams frequencies <br><br />
+</li>
+<li class="fragment">Inability to detect topical multi-word expressions (phrasemes) <br><br />
+</li>
+<li class="fragment">Difficulty in visualizing/interpreting the obtained topics <br><br />
+</li>
+<li class="fragment">For example we can build a corpus of texts speaking a lot of: United States, United Arab Emirates, United Kingdom, United Nations <br><br />
+</li>
+<li class="fragment">Running a topic (1-gram) model can generate topic like that: united, president, election, arab, nations, states, kingdom, emirates <br><br />
+</li>
+<li class="fragment">Is united referring to? UAE? USA? UK? UN? <br><br />
+</li>
 <li class="fragment">Taking into account phrasemes can generate topic content like that: united_arab_emirates, arab_nations, president_election, kingdom</li>
 </ul>
 <p></small></p>
@@ -535,19 +551,23 @@ Goal number 1
 <ul>
 <li class="fragment"><strong>The rationale</strong>: adding an idiom to the dictionary helps topics extraction and characterization only as long as the idiom and its components express different concepts that are relevant to different topics <br></li>
 <li class="fragment"><strong>In practice</strong>: standard STM without covariates modeling is iteratively used to detect topic-relevant token-pairs which are merged into a <strong>single extended_word</strong>, up to a moment when no more relevant compound terms emerge <br></li>
-<li class="fragment">From Bag Of Words to <strong>Bag Of n-grams</strong> <span class="math inline">\((n \in \{1,2\})\)</span></li>
+<li class="fragment">From Bag Of Words to <strong>Bag Of n-grams</strong></li>
 </ul>
 </section></section>
 <section><section id="the-algorithm" class="titleslide slide level1" data-background="img/Algorithm_ICSC_00_Overall.png" data-background-position="left" data-background-size="45%"><h1>The Algorithm</h1></section><section id="the-algorithm-running" class="slide level2" data-background="img/running.gif" data-background-position="right bottom" data-background-size="15%">
 <h2>The Algorithm (running…)</h2>
 <p><small></p>
 <ul>
-<li><span class="math inline">\(D = \{d_1, . . . , d_m\}\)</span> is our corpus of <span class="math inline">\(m\)</span> documents <br></li>
+<li><span class="math inline">\(D = \{d_1, . . . , d_m\}\)</span> is our corpus of <span class="math inline">\(m\)</span> documents <br><br />
+</li>
 <li>Step zero is preprocessing: <br>
 <ol type="1">
-<li>Removing special characters and forcing to lowercase <br></li>
-<li>Tokenizing the string into words <br></li>
-<li>Removing stop-words (i.e., function words, auxiliary/lexical verbs, adverbs/adjectives, file extensions, …) <br></li>
+<li>Removing special characters and forcing to lowercase <br><br />
+</li>
+<li>Tokenizing the string into words <br><br />
+</li>
+<li>Removing stop-words (i.e., function words, auxiliary/lexical verbs, adverbs/adjectives, file extensions, …) <br><br />
+</li>
 <li>Each document is formatted as an ordered list <span class="math inline">\(d_j = (w_j^1,\ldots,w_j^{n_j})\)</span></li>
 </ol></li>
 </ul>
@@ -557,9 +577,11 @@ Goal number 1
 <div class="column" style="float:left; width: 50%">
 <p><small></p>
 <ul>
-<li><p>Given two consecutive tokens <span class="math inline">\(w_1\)</span> and <span class="math inline">\(w_2\)</span>, <span class="math inline">\(w_1\_w_2\)</span> denotes their concatenation (<span class="math inline">\(w_1\)</span> and/or <span class="math inline">\(w_2\)</span> may be the concatenation of any number of words) <br></p></li>
-<li><p>The dictionary <span class="math inline">\(W\)</span> is the union of the tokens and their concatenation <br></p></li>
-<li><p><span class="math inline">\(f(d_j,w)\)</span> denotes the tf-idf of (compound) word <span class="math inline">\(w\)</span> in document <span class="math inline">\(d_j\)</span></p></li>
+<li>Given two consecutive tokens <span class="math inline">\(w_1\)</span> and <span class="math inline">\(w_2\)</span>, <span class="math inline">\(w_1\_w_2\)</span> denotes their concatenation (<span class="math inline">\(w_1\)</span> and/or <span class="math inline">\(w_2\)</span> may be the concatenation of any number of words) <br><br />
+</li>
+<li>The dictionary <span class="math inline">\(W\)</span> is the union of the tokens and their concatenation <br><br />
+</li>
+<li><span class="math inline">\(f(d_j,w)\)</span> denotes the tf-idf of (compound) word <span class="math inline">\(w\)</span> in document <span class="math inline">\(d_j\)</span></li>
 </ul>
 <p></small></p>
 </div>
@@ -570,9 +592,12 @@ Goal number 1
 <h2>The Algorithm (running…)</h2>
 <p><img src="img/Algorithm_ICSC_02_STM.png" /> <small></p>
 <ul>
-<li>Let <span class="math inline">\(|W|\)</span> be the total number of tokens and <span class="math inline">\(|D|\)</span> the number of documents <br></li>
-<li><span class="math inline">\(F\)</span> is the <span class="math inline">\(|W| × K\)</span> matrix whose entry F_{l,t} is the FREX score of token <span class="math inline">\(w_l\)</span> with respect to topic <span class="math inline">\(t\)</span> <br></li>
-<li><span class="math inline">\(P\)</span> is the <span class="math inline">\(K × |D|\)</span> matrix whose entry <span class="math inline">\(P_{t,j}\)</span> is the probability of topic <span class="math inline">\(t\)</span> appearing in document <span class="math inline">\(d_j\)</span> <br></li>
+<li>Let <span class="math inline">\(|W|\)</span> be the total number of tokens and <span class="math inline">\(|D|\)</span> the number of documents <br><br />
+</li>
+<li><span class="math inline">\(F\)</span> is the <span class="math inline">\(|W| × K\)</span> matrix whose entry F_{l,t} is the FREX score of token <span class="math inline">\(w_l\)</span> with respect to topic <span class="math inline">\(t\)</span> <br><br />
+</li>
+<li><span class="math inline">\(P\)</span> is the <span class="math inline">\(K × |D|\)</span> matrix whose entry <span class="math inline">\(P_{t,j}\)</span> is the probability of topic <span class="math inline">\(t\)</span> appearing in document <span class="math inline">\(d_j\)</span> <br><br />
+</li>
 <li>The product <span class="math inline">\(S = F·P\)</span> yields a <span class="math inline">\(|W| × |D|\)</span> matrix whose entry <span class="math inline">\(S_{l,j}\)</span> is a score of the relevance of word <span class="math inline">\(w_l\)</span> in document <span class="math inline">\(d_j\)</span></li>
 </ul>
 <p></small></p>
@@ -589,7 +614,7 @@ Goal number 1
 <p><img src="img/Algorithm_ICSC_05_END.png" /></p>
 <p>Using empirical considerations, for our corpus <span class="math inline">\(\epsilon |W| = 100\)</span></p>
 </section></section>
-<section><section id="results" class="titleslide slide level1" data-background="img/coming_soon.gif"><h1>Results</h1></section><section id="our-corpus" class="slide level2" data-background="img/livraria-lello-stairs.jpg">
+<section><section id="results" class="titleslide slide level1" data-background="img/results02.gif"><h1>Results</h1></section><section id="our-corpus" class="slide level2" data-background="img/livraria-lello-stairs.jpg">
 <h2>Our Corpus</h2>
 <table style="width:50%;">
 <colgroup>

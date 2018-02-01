@@ -39,7 +39,7 @@ output:
     + Our Extension : **from Bag of Words to Bag of N-grams**
     <br>
     + The Algorithm
-<br>
+<br>  
 - Some Results
 <br>
 - Conclusions
@@ -51,19 +51,19 @@ output:
 <small>
 
 - Indexing of Anonimous Networks for Crime Information Search
-<br>
+<br>  
 - We performed a complete crawling of four famous ToR drug marketplaces: Alphabay, Crypto Market, East India and Nucleus
-<br>
+<br>  
 - Marketplaces composed of pages advertising some item for sale and grouped by category
-<br>
+<br>  
 - We generated a corpus of documents for which covariate information (the market and the category) are immediately available
-<br>
+<br>  
 - Goals for the IANCIS project:
 
     1. Understand if there is any difference between markets/categories
-    <br>
+    <br>  
     2. Verify the presence of context-specific idioms and a topical slang
-<br>
+<br>  
 - Topic Model (TM) can be a natural choice in order to analyze the corpus
 <br>
 
@@ -77,10 +77,10 @@ output:
 <!-- > Structural Topic Modelling is a recent extension to TM  -->
 
 > - STM allows incorporating tags, categories, metadata and other information accompanying the text archive
-<br>
+<br>  
 > - STM uses covariate information to parametrize the prior
 distributions to potentially affect both topical prevalence and topical content. <div class="fragment current-visible"><div class="highlight-red"> Goal number 1 </div></div>
-<br>
+<br>  
 > - STM use the Bag Of Word approach <div class="fragment current-visible"><div class="highlight-red"> ~~Goal number 2~~ </div></div>
 
 <br>
@@ -100,19 +100,19 @@ distributions to potentially affect both topical prevalence and topical content.
 <small>
 
 > -  Bag Of Words (BOW) paradigm: documents are viewed as a multisets of words, ignoring grammar and syntax
-<br>
+<br>  
 > - Only focusing on unigrams frequencies
-<br>
+<br>  
 > -  Inability to detect topical multi-word expressions (phrasemes)
-<br>
+<br>  
 > - Difficulty in visualizing/interpreting the obtained topics
-<br>
+<br>  
 > - For example we can build a corpus of texts speaking a lot of: United States, United Arab Emirates, United Kingdom, United Nations
-<br>
+<br>  
 > - Running a topic (1-gram) model can generate topic like that: united, president, election, arab, nations, states, kingdom, emirates
-<br>
+<br>  
 > - Is united referring to? UAE? USA? UK? UN?
-<br>
+<br>  
 > - Taking into account phrasemes can generate topic content like that: united_arab_emirates, arab_nations, president_election, kingdom
 
 </small>
@@ -132,10 +132,9 @@ iteratively used to detect topic-relevant token-pairs which are
 merged into a **single extended_word**, up to a moment when no more
 relevant compound terms emerge
 <br>
-> - From Bag Of Words to **Bag Of n-grams** $(n \in \{1,2\})$
-
-
-
+> - From Bag Of Words to **Bag Of n-grams**
+  
+  
 # The Algorithm {data-background="img/Algorithm_ICSC_00_Overall.png" data-background-position="left" data-background-size="45%"}
 
 
@@ -144,15 +143,15 @@ relevant compound terms emerge
 <small>
 
 - $D = \{d_1, . . . , d_m\}$ is our corpus of $m$ documents
-<br>
+<br>  
 - Step zero is preprocessing:
-    <br>
+    <br>  
     1. Removing special characters and forcing to lowercase
-    <br>
+    <br>  
     2. Tokenizing the string into words
-    <br>
+    <br>  
     3. Removing stop-words (i.e., function words, auxiliary/lexical verbs, adverbs/adjectives, file extensions, ...)
-    <br>
+    <br>  
     4. Each document is formatted as an ordered list $d_j = (w_j^1,\ldots,w_j^{n_j})$
 
 </small>
@@ -165,11 +164,9 @@ relevant compound terms emerge
 - Given two consecutive tokens  $w_1$ and $w_2$, $w_1\_w_2$ denotes their concatenation
 ($w_1$ and/or $w_2$ may be the concatenation
 of any number of words)
-<br>
-
+<br>  
 - The dictionary $W$ is the union of the tokens and their concatenation
-<br>
-
+<br>  
 - $f(d_j,w)$ denotes the tf-idf of
 (compound) word $w$ in document $d_j$
 
@@ -188,11 +185,11 @@ of any number of words)
 <small>
 
 - Let $|W|$ be the total number of tokens and $|D|$ the number of documents
-<br>
+<br>  
 - $F$ is the $|W| × K$ matrix whose entry F_{l,t} is the FREX score of token $w_l$ with respect to topic $t$
-<br>
+<br>  
 - $P$ is the $K × |D|$ matrix whose entry $P_{t,j}$ is the probability of topic $t$ appearing in document $d_j$
-<br>
+<br>  
 - The product $S = F·P$ yields a $|W| × |D|$ matrix whose entry $S_{l,j}$ is a score of the relevance of word $w_l$ in document $d_j$
 
 </small>
@@ -227,7 +224,7 @@ Dictionary update
 
 Using empirical considerations, for our corpus $\epsilon |W| = 100$
 
-# Results {data-background="img/coming_soon.gif"}
+# Results {data-background="img/results02.gif"}
 
 
 <!-- ## Our Corpus {data-background="img/name_of_the_rose.gif"} -->
