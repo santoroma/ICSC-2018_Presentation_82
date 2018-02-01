@@ -186,7 +186,7 @@ of any number of words)
 
 - Let $|W|$ be the total number of tokens and $|D|$ the number of documents
 <br>  
-- $F$ is the $|W| × K$ matrix whose entry F_{l,t} is the FREX score of token $w_l$ with respect to topic $t$
+- $F$ is the $|W| × K$ matrix whose entry $F_{l,t}$ is the FREX score of token $w_l$ with respect to topic $t$
 <br>  
 - $P$ is the $K × |D|$ matrix whose entry $P_{t,j}$ is the probability of topic $t$ appearing in document $d_j$
 <br>  
