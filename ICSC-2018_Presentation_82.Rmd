@@ -44,7 +44,7 @@ output:
 <br>
 - Conclusions
 
-# Scope: Help Italian Investigators on ToR Drugs Marketplaces  {data-background="img/sherlok_scope.gif"}
+# Scope: Help Italian Investigators on ToR Drugs Marketplaces  {data-background="img/sherlock_scope.gif"}
 
 
 ## IANCIS ISEC Project  {data-background="img/spiderman.gif"}
