@@ -463,17 +463,14 @@ Stefano Guarino <sup><small>1</small></sup> and <ins>Mario Santoro</ins><sup><sm
 <section id="just-a-summary" class="slide level2" data-background="img/mars.gif">
 <h2>Just a Summary</h2>
 <ul>
-<li>Scope: Help Italian Investigators on ToR Drugs Marketplaces<br />
-<br></li>
+<li>Scope: Help Italian Investigators on ToR Drugs Marketplaces <br></li>
 <li><p>Using Topic Model:</p>
 <ul>
 <li>Base Structural Topic Model <br></li>
 <li>Our Extension : <strong>from Bag of Words to Bag of N-grams</strong> <br></li>
-<li>The Algorithm<br />
-<br></li>
+<li>The Algorithm <br></li>
 </ul></li>
-<li>Some Results<br />
-<br></li>
+<li>Some Results <br></li>
 <li><p>Conclusions</p></li>
 </ul>
 </section>
@@ -481,20 +478,14 @@ Stefano Guarino <sup><small>1</small></sup> and <ins>Mario Santoro</ins><sup><sm
 <h2>IANCIS ISEC Project</h2>
 <p><small></p>
 <ul>
-<li>Indexing of Anonimous Networks for Crime Information Search <br><br />
-</li>
-<li>We performed a complete crawling of four famous ToR drug marketplaces: Alphabay, Crypto Market, East India and Nucleus <br><br />
-</li>
-<li>Marketplaces composed of pages advertising some item for sale and grouped by category <br><br />
-</li>
-<li>We generated a corpus of documents for which covariate information (the market and the category) are immediately available <br><br />
-</li>
+<li>Indexing of Anonimous Networks for Crime Information Search <br></li>
+<li>We performed a complete crawling of four famous ToR drug marketplaces: Alphabay, Crypto Market, East India and Nucleus <br></li>
+<li>Marketplaces composed of pages advertising some item for sale and grouped by category <br></li>
+<li>We generated a corpus of documents for which covariate information (the market and the category) are immediately available <br></li>
 <li><p>Goals for the IANCIS project:</p>
 <ol type="1">
 <li>Understand if there is any difference between markets/categories <br></li>
-<li>Verify the presence of context-specific idioms and a topical slang<br />
-<br><br />
-</li>
+<li>Verify the presence of context-specific idioms and a topical slang <br></li>
 </ol></li>
 <li><p>Topic Model (TM) can be a natural choice in order to analyze the corpus <br></p></li>
 </ul>
@@ -504,8 +495,7 @@ Stefano Guarino <sup><small>1</small></sup> and <ins>Mario Santoro</ins><sup><sm
 <h2>Structural Topic Model (STM)</h2>
 <!-- > Structural Topic Modelling is a recent extension to TM  -->
 <ul>
-<li class="fragment">STM allows incorporating tags, categories, metadata and other information accompanying the text archive<br />
-<br></li>
+<li class="fragment">STM allows incorporating tags, categories, metadata and other information accompanying the text archive <br></li>
 <li class="fragment">STM uses covariate information to parametrize the prior distributions to potentially affect both topical prevalence and topical content.
 <div class="fragment current-visible">
 <div class="highlight-red">
@@ -529,20 +519,13 @@ Goal number 1
 <h2>Bag Of Words (BOW) Recap</h2>
 <p><small></p>
 <ul>
-<li class="fragment">Bag Of Words (BOW) paradigm: documents are viewed as a multisets of words, ignoring grammar and syntax <br><br />
-</li>
-<li class="fragment">Only focusing on unigrams frequencies<br />
-<br></li>
-<li class="fragment">Inability to detect topical multi-word expressions (phrasemes) <br><br />
-</li>
-<li class="fragment">Difficulty in visualizing/interpreting the obtained topics <br><br />
-</li>
-<li class="fragment">For example we can build a corpus of texts speaking a lot of: United States, United Arab Emirates, United Kingdom, United Nations <br><br />
-</li>
-<li class="fragment">Running a topic (1-gram) model can generate topic like that: united, president, election, arab, nations, states, kingdom, emirates<br />
-<br></li>
-<li class="fragment">Is united referring to? UAE? USA? UK? UN?<br />
-<br></li>
+<li class="fragment">Bag Of Words (BOW) paradigm: documents are viewed as a multisets of words, ignoring grammar and syntax <br></li>
+<li class="fragment">Only focusing on unigrams frequencies <br></li>
+<li class="fragment">Inability to detect topical multi-word expressions (phrasemes) <br></li>
+<li class="fragment">Difficulty in visualizing/interpreting the obtained topics <br></li>
+<li class="fragment">For example we can build a corpus of texts speaking a lot of: United States, United Arab Emirates, United Kingdom, United Nations <br></li>
+<li class="fragment">Running a topic (1-gram) model can generate topic like that: united, president, election, arab, nations, states, kingdom, emirates <br></li>
+<li class="fragment">Is united referring to? UAE? USA? UK? UN? <br></li>
 <li class="fragment">Taking into account phrasemes can generate topic content like that: united_arab_emirates, arab_nations, president_election, kingdom</li>
 </ul>
 <p></small></p>
@@ -550,10 +533,8 @@ Goal number 1
 <section><section id="our-extended-stm" class="titleslide slide level1" data-background="img/Extended_STM.gif"><h1>Our Extended STM</h1></section><section id="our-extended-stm-1" class="slide level2" data-background="img/Extended_STM.gif" data-background-position="right bottom" data-background-size="20%">
 <h2>Our Extended STM</h2>
 <ul>
-<li class="fragment"><strong>The rationale</strong>: adding an idiom to the dictionary helps topics extraction and characterization only as long as the idiom and its components express different concepts that are relevant to different topics<br />
-<br></li>
-<li class="fragment"><strong>In practice</strong>: standard STM without covariates modeling is iteratively used to detect topic-relevant token-pairs which are merged into a <strong>single extended_word</strong>, up to a moment when no more relevant compound terms emerge<br />
-<br></li>
+<li class="fragment"><strong>The rationale</strong>: adding an idiom to the dictionary helps topics extraction and characterization only as long as the idiom and its components express different concepts that are relevant to different topics <br></li>
+<li class="fragment"><strong>In practice</strong>: standard STM without covariates modeling is iteratively used to detect topic-relevant token-pairs which are merged into a <strong>single extended_word</strong>, up to a moment when no more relevant compound terms emerge <br></li>
 <li class="fragment">From Bag Of Words to <strong>Bag Of n-grams</strong> <span class="math inline">\((n \in \{1,2\})\)</span></li>
 </ul>
 </section></section>
@@ -561,17 +542,12 @@ Goal number 1
 <h2>The Algorithm (running…)</h2>
 <p><small></p>
 <ul>
-<li><span class="math inline">\(D = \{d_1, . . . , d_m\}\)</span> is our corpus of <span class="math inline">\(m\)</span> documents<br />
-<br></li>
-<li>Step zero is preprocessing:<br />
-<br>
+<li><span class="math inline">\(D = \{d_1, . . . , d_m\}\)</span> is our corpus of <span class="math inline">\(m\)</span> documents <br></li>
+<li>Step zero is preprocessing: <br>
 <ol type="1">
-<li>removing special characters and forcing to lowercase <br><br />
-</li>
-<li>tokenizing the string into words <br><br />
-</li>
-<li>removing stop-words (i.e., function words, auxiliary/lexical verbs, adverbs/adjectives, file extensions, …)<br />
-<br></li>
+<li>removing special characters and forcing to lowercase <br></li>
+<li>tokenizing the string into words <br></li>
+<li>removing stop-words (i.e., function words, auxiliary/lexical verbs, adverbs/adjectives, file extensions, …) <br></li>
 <li>Each document is formatted as an ordered list <span class="math inline">\(d_j = (w_j^1,\ldots,w_j^{n_j})\)</span></li>
 </ol></li>
 </ul>
@@ -594,12 +570,9 @@ Goal number 1
 <h2>The Algorithm (running…)</h2>
 <p><img src="img/Algorithm_ICSC_02_STM.png" /> <small></p>
 <ul>
-<li>Let <span class="math inline">\(|W|\)</span> be the total number of tokens and <span class="math inline">\(|D|\)</span> the number of documents <br><br />
-</li>
-<li><span class="math inline">\(F\)</span> is the <span class="math inline">\(|W| × K\)</span> matrix whose entry F_{l,t} is the FREX score of token <span class="math inline">\(w_l\)</span> with respect to topic <span class="math inline">\(t\)</span><br />
-<br></li>
-<li><span class="math inline">\(P\)</span> is the <span class="math inline">\(K × |D|\)</span> matrix whose entry <span class="math inline">\(P_{t,j}\)</span> is the probability of topic <span class="math inline">\(t\)</span> appearing in document <span class="math inline">\(d_j\)</span><br />
-<br></li>
+<li>Let <span class="math inline">\(|W|\)</span> be the total number of tokens and <span class="math inline">\(|D|\)</span> the number of documents <br></li>
+<li><span class="math inline">\(F\)</span> is the <span class="math inline">\(|W| × K\)</span> matrix whose entry F_{l,t} is the FREX score of token <span class="math inline">\(w_l\)</span> with respect to topic <span class="math inline">\(t\)</span> <br></li>
+<li><span class="math inline">\(P\)</span> is the <span class="math inline">\(K × |D|\)</span> matrix whose entry <span class="math inline">\(P_{t,j}\)</span> is the probability of topic <span class="math inline">\(t\)</span> appearing in document <span class="math inline">\(d_j\)</span> <br></li>
 <li>The product <span class="math inline">\(S = F·P\)</span> yields a <span class="math inline">\(|W| × |D|\)</span> matrix whose entry <span class="math inline">\(S_{l,j}\)</span> is a score of the relevance of word <span class="math inline">\(w_l\)</span> in document <span class="math inline">\(d_j\)</span></li>
 </ul>
 <p></small></p>
@@ -663,8 +636,7 @@ Goal number 1
 <li><p>We used <em>searchK</em> on the set <span class="math inline">\(\mathcal{K} = \{40, 44, 48, 52, 56, 58, 59, 60, 61, 62, 63, 64, 65, 66, 68, 69, 70, 71\}\)</span></p></li>
 <li>Choice of <span class="math inline">\(\mathcal{K}\)</span>: to explore a relatively wide range of values larger than 39 (the number of categories):
 <ul>
-<li>to assess the ability of Topic Modelling to (automatically) produce a refined characterization of the dataset<br />
-</li>
+<li>to assess the ability of Topic Modelling to (automatically) produce a refined characterization of the dataset</li>
 <li>to extract cross-category topics such as “shipment” or “drugs effects”</li>
 </ul></li>
 </ul>
@@ -683,8 +655,7 @@ Goal number 1
 <ul>
 <li><p>The highest score tokens were:</p>
 <ul>
-<li>ice, meth, <strong>crystal_meth</strong>, shards<br />
-</li>
+<li>ice, meth, <strong>crystal_meth</strong>, shards</li>
 <li><strong>crystal_methamphetamine</strong></li>
 <li><strong>0.5g_crystal_methamphetamine</strong></li>
 </ul></li>
@@ -712,10 +683,8 @@ Goal number 1
 <li><p><span class="math inline">\(7\)</span> different topics: <span class="math inline">\(1, 14, 22, 46, 50, 54, 56\)</span></p></li>
 <li><p>Zoom to the <span class="math inline">\(56\)</span> which highest score tokens were:</p>
 <ul>
-<li><strong>shatter_pull_snap</strong>, <strong>sour_strawberry_diesel</strong><br />
-</li>
-<li><strong>og_kush</strong>, <strong>ak_strain</strong>, indoor, scout, hybrid, indica<br />
-</li>
+<li><strong>shatter_pull_snap</strong>, <strong>sour_strawberry_diesel</strong></li>
+<li><strong>og_kush</strong>, <strong>ak_strain</strong>, indoor, scout, hybrid, indica</li>
 <li>sativa, <strong>chemicalscannabis_hashishbuds</strong>, <strong>content_thc_cbd</strong>, <strong>14g_black_diamond</strong></li>
 </ul></li>
 <li><p>Using the <em>estimateEffect</em>:</p>

@@ -1,9 +1,9 @@
 ---
 title: "Multi-Word Structural Topic Modelling of ToR Drug Marketplaces"
 author: |
-  | 
+  |
   | Stefano Guarino <sup><small>1</small></sup> and <ins>Mario Santoro</ins><sup><small>1, 2</small></sup>
-  | 
+  |
   |
   | <small>1 - Istituto per le Applicazioni del Calcolo “Mauro Picone” - Consiglio Nazionale delle Ricerche</small>
   | <small>2 - Dipartimento di Scienze Statistiche - Sapienza Università di Roma </small>
@@ -13,7 +13,7 @@ output:
   revealjs::revealjs_presentation:
     template: ICSC-2018_Template.html
     incremental: false
-    self_contained: false  
+    self_contained: false
     reveal_plugins: ["notes", "zoom", "menu"]
     theme: league
     transition: zoom
@@ -27,63 +27,64 @@ output:
     defaultTiming: 120
 ---
 
-## Just a Summary{data-background="img/mars.gif"} 
+## Just a Summary{data-background="img/mars.gif"}
 
-- Scope: Help Italian Investigators on ToR Drugs Marketplaces  
+
+- Scope: Help Italian Investigators on ToR Drugs Marketplaces
 <br>
-- Using Topic Model:    
+- Using Topic Model:
 
     + Base  Structural Topic Model
     <br>
     + Our Extension : **from Bag of Words to Bag of N-grams**
     <br>
-    + The Algorithm   
+    + The Algorithm
 <br>
-- Some Results   
+- Some Results
 <br>
 - Conclusions
-  
+
 # Scope: Help Italian Investigators on ToR Drugs Marketplaces  {data-background="img/sherlok_scope.gif"}
-    
-    
+
+
 ## IANCIS ISEC Project  {data-background="img/spiderman.gif"}
-<small>  
-  
+<small>
+
 - Indexing of Anonimous Networks for Crime Information Search
-<br>  
+<br>
 - We performed a complete crawling
 of four famous ToR drug marketplaces: Alphabay, Crypto Market, East India and Nucleus
-<br>  
+<br>
 - Marketplaces composed of pages advertising some item for sale
  and grouped by category
-<br>  
+<br>
 - We generated a corpus of documents for which covariate information (the market and the category) are immediately available
-<br>  
-- Goals for the IANCIS project:  
+<br>
+- Goals for the IANCIS project:
 
     1. Understand if there is any difference between markets/categories
     <br>
-    2. Verify the presence of context-specific idioms and a topical slang  
-<br>    
+    2. Verify the presence of context-specific idioms and a topical slang
+<br>
 - Topic Model (TM) can be a natural choice in order to analyze the corpus
-<br>   
-  
+<br>
+
 </small>
 
 # Our Choice: Structural Topic Model (STM)  {data-background="img/STM_Scheme.png" data-center="false"}
-   
+
 
 ## Structural Topic Model (STM) {data-background="img/STM_Scheme.png" data-background-position="bottom" data-background-size="30%"}
-  
+
 <!-- > Structural Topic Modelling is a recent extension to TM  -->
 
-> - STM allows incorporating tags, categories, metadata and other information accompanying the text archive  
+> - STM allows incorporating tags, categories, metadata and other information accompanying the text archive
 <br>
 > - STM uses covariate information to parametrize the prior
-distributions to potentially affect both topical prevalence and topical content. <div class="fragment current-visible"><div class="highlight-red"> Goal number 1 </div></div>  
+distributions to potentially affect both topical prevalence and topical content. <div class="fragment current-visible"><div class="highlight-red"> Goal number 1 </div></div>
 <br>
-> - STM use the Bag Of Word approach <div class="fragment current-visible"><div class="highlight-red"> ~~Goal number 2~~ </div></div> 
-   
+> - STM use the Bag Of Word approach <div class="fragment current-visible"><div class="highlight-red"> ~~Goal number 2~~ </div></div>
+
 <br>
 <!-- <aside class="notes"> -->
 <!-- This is my note. -->
@@ -92,90 +93,90 @@ distributions to potentially affect both topical prevalence and topical content.
 <!-- - like this list -->
 
 <!-- </aside>   -->
-  
-# Bag Of Words (BOW) Recap {data-background="img/BOW_2.gif"} 
-  
-  
-## Bag Of Words (BOW) Recap {data-background="img/BOW_2.gif" data-background-position="right" data-background-size="10%"} 
 
-<small>  
+# Bag Of Words (BOW) Recap {data-background="img/BOW_2.gif"}
 
-> -  Bag Of Words (BOW) paradigm: documents are viewed as a multisets of words, ignoring grammar and syntax 
-<br>  
-> - Only focusing on unigrams frequencies   
+
+## Bag Of Words (BOW) Recap {data-background="img/BOW_2.gif" data-background-position="right" data-background-size="10%"}
+
+<small>
+
+> -  Bag Of Words (BOW) paradigm: documents are viewed as a multisets of words, ignoring grammar and syntax
 <br>
-> -  Inability to detect topical multi-word expressions (phrasemes) <br>  
+> - Only focusing on unigrams frequencies
+<br>
+> -  Inability to detect topical multi-word expressions (phrasemes) <br>
 > - Difficulty in visualizing/interpreting the obtained topics
-<br>  
+<br>
 > - For example we can build a corpus of texts speaking a lot of:
 United States, United Arab Emirates, United Kingdom, United Nations
-<br>  
-> - Running a topic (1-gram) model can generate topic like that:
-united, president, election, arab, nations, states, kingdom, emirates  
 <br>
-> - Is united referring to? UAE? USA? UK? UN?  
-<br> 
-> - Taking into account phrasemes can generate topic content like that: united_arab_emirates, arab_nations, president_election, kingdom  
+> - Running a topic (1-gram) model can generate topic like that:
+united, president, election, arab, nations, states, kingdom, emirates
+<br>
+> - Is united referring to? UAE? USA? UK? UN?
+<br>
+> - Taking into account phrasemes can generate topic content like that: united_arab_emirates, arab_nations, president_election, kingdom
 
 </small>
 
 
 
 # Our Extended STM {data-background="img/Extended_STM.gif"}
-  
-  
-## Our Extended STM {data-background="img/Extended_STM.gif" data-background-position="right bottom" data-background-size="20%"} 
- 
+
+
+## Our Extended STM {data-background="img/Extended_STM.gif" data-background-position="right bottom" data-background-size="20%"}
+
 
 > - **The rationale**: adding an idiom to the dictionary helps topics extraction and characterization only as long as the
 idiom and its components express different concepts that are
-relevant to different topics  
+relevant to different topics
 <br>
 >- **In practice**: standard STM without covariates modeling is
-iteratively used to detect topic-relevant token-pairs which are 
+iteratively used to detect topic-relevant token-pairs which are
 merged into a **single extended_word**, up to a moment when no more
-relevant compound terms emerge  
+relevant compound terms emerge
 <br>
-> - From Bag Of Words to **Bag Of n-grams** $(n \in \{1,2\})$ 
-  
-  
+> - From Bag Of Words to **Bag Of n-grams** $(n \in \{1,2\})$
+
+
 
 # The Algorithm {data-background="img/Algorithm_ICSC_00_Overall.png" data-background-position="left" data-background-size="45%"}
 
-  
+
 ## The Algorithm (running...) {data-background="img/running.gif" data-background-position="right bottom" data-background-size="15%"}
 
 <small>
 
-- $D = \{d_1, . . . , d_m\}$ is our corpus of $m$ documents  
+- $D = \{d_1, . . . , d_m\}$ is our corpus of $m$ documents
 <br>
-- Step zero is preprocessing:  
-    <br>  
-    1. removing special characters and forcing to lowercase
-    <br>  
-    2. tokenizing the string into words
-    <br>  
-    3. removing stop-words (i.e., function words, auxiliary/lexical verbs, adverbs/adjectives, file extensions, ...)  
+- Step zero is preprocessing:
     <br>
-    4. Each document is formatted as an ordered list $d_j = (w_j^1,\ldots,w_j^{n_j})$      
+    1. removing special characters and forcing to lowercase
+    <br>
+    2. tokenizing the string into words
+    <br>
+    3. removing stop-words (i.e., function words, auxiliary/lexical verbs, adverbs/adjectives, file extensions, ...)
+    <br>
+    4. Each document is formatted as an ordered list $d_j = (w_j^1,\ldots,w_j^{n_j})$
 
 </small>
-  
+
 ## The Algorithm (running...) {data-background="img/running.gif" data-background-position="right bottom" data-background-size="15%"}
 
 <div class="column" style="float:left; width: 50%">
-<small>  
+<small>
 
 - Given two consecutive tokens  $w_1$ and $w_2$, $w_1\_w_2$ denotes their concatenation
 ($w_1$ and/or $w_2$ may be the concatenation
 of any number of words)
 <br>
-  
-- The dictionary $W$ is the union of the tokens and their concatenation 
+
+- The dictionary $W$ is the union of the tokens and their concatenation
 <br>
-  
+
 - $f(d_j,w)$ denotes the tf-idf of
-(compound) word $w$ in document $d_j$    
+(compound) word $w$ in document $d_j$
 
 </small>
 </div>
@@ -183,36 +184,36 @@ of any number of words)
   <br>
   <br>
   ![](img/Algorithm_ICSC_01_BiGram.png)
-</div>  
+</div>
 
-  
+
 ## The Algorithm (running...) {data-background="img/running.gif" data-background-position="right bottom" data-background-size="15%"}
 
  ![](img/Algorithm_ICSC_02_STM.png)
-<small>  
+<small>
 
-- Let $|W|$ be the total number of tokens and $|D|$ the number of documents 
-<br>  
-- $F$ is the $|W| × K$ matrix whose entry F_{l,t} is the FREX score of token $w_l$ with respect to topic $t$  
+- Let $|W|$ be the total number of tokens and $|D|$ the number of documents
 <br>
-- $P$ is the $K × |D|$ matrix whose entry $P_{t,j}$ is the probability of topic $t$ appearing in document $d_j$  
+- $F$ is the $|W| × K$ matrix whose entry F_{l,t} is the FREX score of token $w_l$ with respect to topic $t$
 <br>
-- The product $S = F·P$ yields a $|W| × |D|$ matrix whose entry $S_{l,j}$ is a score of the relevance of word $w_l$ in document $d_j$  
+- $P$ is the $K × |D|$ matrix whose entry $P_{t,j}$ is the probability of topic $t$ appearing in document $d_j$
+<br>
+- The product $S = F·P$ yields a $|W| × |D|$ matrix whose entry $S_{l,j}$ is a score of the relevance of word $w_l$ in document $d_j$
 
 </small>
- 
+
 
 
 ## The Algorithm (running...) {data-background="img/running.gif" data-background-position="right bottom" data-background-size="15%"}
 
 <div class="column" style="float:left; width: 50%">
 
-<br> 
+<br>
 Compound tokens selection
 <br><br>
 <small>
 Using empirical considerations for our corpus<br>
-$p_{min} = 0.01$, $FREX_{min} = 0.95$  and then 
+$p_{min} = 0.01$, $FREX_{min} = 0.95$  and then
 <br>
 $s_{min} = p_{min} \cdot FREX_{min} = 9.5 \cdot 10^{-3}$
 </small>
@@ -223,66 +224,66 @@ Dictionary update
 <div class="column" style="float:right; width: 40%">
   ![](img/Algorithm_ICSC_03_BiGram_Selection.png)
   ![](img/Algorithm_ICSC_04_Text_Update.png)
-</div>   
-  
+</div>
+
 ## The Algorithm (...end) {data-background="img/running_end.gif" data-background-position="bottom" data-background-size="25%"}
 
 ![](img/Algorithm_ICSC_05_END.png)
 
-Using empirical considerations, for our corpus $\epsilon |W| = 100$ 
+Using empirical considerations, for our corpus $\epsilon |W| = 100$
 
 # Results {data-background="img/coming_soon.gif"}
-  
-  
+
+
 <!-- ## Our Corpus {data-background="img/name_of_the_rose.gif"} -->
-  
-## Our Corpus {data-background="img/livraria-lello-stairs.jpg"}  
+
+## Our Corpus {data-background="img/livraria-lello-stairs.jpg"}
 
 -----------------------------
-    Market          # of pages 
+    Market          # of pages
 ----------------- ----------------
-    Nucleus           8902     
+    Nucleus           8902
 
-   Alphabay           7472     
+   Alphabay           7472
 
- Crypto Market        2435     
+ Crypto Market        2435
 
   East India          1682
 
-  **Total Pages**     20491     
+  **Total Pages**     20491
 ---------------------------------
-  
-  
+
+
 ## Running Final STM with Covariate: Choosing $K$ {data-background="img/Run_Forrest.gif"}
 
 <br><br>
 
-<small>  
-  
-- There is not a *true* value for $K$  
-  
-- It depends on the objective of the study  
+<small>
 
-- *searchK* function in STM use 4 different tests: exclusivity, semantic coherence, heldout, and residual.  
+- There is not a *true* value for $K$
 
-- We used *searchK* on the set $\mathcal{K} = \{40, 44, 48, 52, 56, 58, 59, 60, 61, 62, 63, 64, 65, 66, 68, 69, 70, 71\}$  
+- It depends on the objective of the study
+
+- *searchK* function in STM use 4 different tests: exclusivity, semantic coherence, heldout, and residual.
+
+- We used *searchK* on the set $\mathcal{K} = \{40, 44, 48, 52, 56, 58, 59, 60, 61, 62, 63, 64, 65, 66, 68, 69, 70, 71\}$
 
 - Choice of $\mathcal{K}$: to explore a relatively
 wide range of values larger than 39 (the number of
-categories):  
-    + to assess the ability of Topic Modelling to (automatically) produce a refined characterization of the dataset  
+categories):
+    + to assess the ability of Topic Modelling to (automatically) produce a refined characterization of the dataset
     + to extract cross-category topics such as
 “shipment” or “drugs effects”
-  
-</small>  
-  
-## {data-background="img/Run_Forrest.gif" data-background-transition="convex"}  
+
+</small>
+
+## {data-background="img/Run_Forrest.gif" data-background-transition="convex"}
 
 ![](img/search_K.png)
-  
+
 ## Running Final STM with Covariate: Choosing $K$ {data-background="img/Run_Forrest.gif" data-background-transition="convex"}
 
-![](img/search_K.png){width=60%}  
+![](img/search_K.png){width=60%}
 
 We decided to set K = 65 as it seems
 to provide a reasonable trade-off among the four metrics
@@ -293,24 +294,24 @@ to provide a reasonable trade-off among the four metrics
 
 ## Topic 30: Methamphetamine {data-background="img/Breaking_Bad_None.png" data-background-transition="convex"}
 
-<div class="column" style="float:left; width: 50%">    
-- The highest score tokens were: 
+<div class="column" style="float:left; width: 50%">
+- The highest score tokens were:
 
-    + ice, meth, **crystal_meth**, shards   
-    + **crystal_methamphetamine** 
-    + **0.5g_crystal_methamphetamine**   
-  
-</div> 
+    + ice, meth, **crystal_meth**, shards
+    + **crystal_methamphetamine**
+    + **0.5g_crystal_methamphetamine**
+
+</div>
 <div class="column" style="float:right; width: 40%">
- ![](img/crystal-meth.jpg){width=70%}  
-</div>    
-  
-- Methamphetamine was tagged only in Crypto Market with frequency of 0.022  
+ ![](img/crystal-meth.jpg){width=70%}
+</div>
+
+- Methamphetamine was tagged only in Crypto Market with frequency of 0.022
 
 - Using the *estimateEffect*:
 
-    + in Nucleus (0.0218) the topic is 2 times more prevalent respect the others (0.0114) <div class="fragment current-visible">(it is statistically significant!)</div>  
-  
+    + in Nucleus (0.0218) the topic is 2 times more prevalent respect the others (0.0114) <div class="fragment current-visible">(it is statistically significant!)</div>
+
 #  {data-background="img/Breaking_Bad_Hashish_Sativa.png" data-background-transition="convex"}
 
 <!-- Background thanks to http://sbll.org/breakingbad/ -->
@@ -318,40 +319,40 @@ to provide a reasonable trade-off among the four metrics
 ## Cannabis and Hashish Topics {data-background="img/Breaking_Bad_None.png" data-background-transition="convex"}
 
 <small>
-  
-<div class="column" style="float:left; width: 50%"> 
-- $7$ different topics: $1, 14, 22, 46, 50, 54, 56$  
-  
-- Zoom to the $56$ which highest score tokens were: 
 
-    + **shatter_pull_snap**, **sour_strawberry_diesel**    
-    + **og_kush**, **ak_strain**, indoor, scout, hybrid, indica    
-    + sativa, **chemicalscannabis_hashishbuds**, **content_thc_cbd**, **14g_black_diamond** 
-    
-- Using the *estimateEffect*:   
+<div class="column" style="float:left; width: 50%">
+- $7$ different topics: $1, 14, 22, 46, 50, 54, 56$
 
-    + in East India the topic $56$ show a $30\%$ increase respect to the others<div class="fragment current-visible">(it is statistically significant!)</div>  
-    
-</small>         
+- Zoom to the $56$ which highest score tokens were:
+
+    + **shatter_pull_snap**, **sour_strawberry_diesel**
+    + **og_kush**, **ak_strain**, indoor, scout, hybrid, indica
+    + sativa, **chemicalscannabis_hashishbuds**, **content_thc_cbd**, **14g_black_diamond**
+
+- Using the *estimateEffect*:
+
+    + in East India the topic $56$ show a $30\%$ increase respect to the others<div class="fragment current-visible">(it is statistically significant!)</div>
+
+</small>
 </div>
 <div class="column" style="float:right; width: 50%">
  ![](img/shatter_sativa.jpg){width=45%}
- ![](img/og_kush.jpg){width=45%}  
-</div>  
+ ![](img/og_kush.jpg){width=45%}
+</div>
 
 # Conclusions and Future Works {data-background="img/2001_ending.gif"}
-  
+
 ## Conclusions {data-background="img/inception_end.gif"}
-  
-> - As an exploratory approach we opted for an ad-hoc heuristic based on iteratively apply standard STM to detect topic-relevant term-pairs and merge them into a single extended-word 
-  
-> - The coherence and the intelligibility of the obtained topics were significantly enhanced 
+
+> - As an exploratory approach we opted for an ad-hoc heuristic based on iteratively apply standard STM to detect topic-relevant term-pairs and merge them into a single extended-word
+
+> - The coherence and the intelligibility of the obtained topics were significantly enhanced
 
 > - Through a fine-grained and cross-market analysis of the thematic organization of the corpus we were able to gain relevant information about drug trade on ToR that goes well beyond those provided by the already available high level content classification
-  
-  
+
+
 ## Future Works {data-background="img/time_machine.gif"}
-  
+
 > - Extend the *a priori* joint distributions to the N-grams and to the skip-grams
 <br>
 > - Increase performances
@@ -363,4 +364,4 @@ to provide a reasonable trade-off among the four metrics
 ## THANKS!!! {data-background="img/truman_show_end.gif"}
 
 [github.com/santoroma/ICSC-2018_Presentation_82](http://github.com/santoroma/ICSC-2018_Presentation_82)
- 
+
