@@ -1,6 +1,6 @@
 ---
 title: "Multi-Word Structural Topic Modelling of ToR Drug Marketplaces"
-author: |
+author: 
   |
   | Stefano Guarino <sup><small>1</small></sup> and <ins>Mario Santoro</ins><sup><small>1, 2</small></sup>
   |
@@ -27,7 +27,7 @@ output:
     defaultTiming: 120
 ---
 
-## Just a Summary{data-background="img/mars.gif"}
+## Outline {data-background="img/mars.gif"}
 
 
 - Scope: Help Italian Investigators on ToR Drugs Marketplaces
@@ -167,8 +167,8 @@ of any number of words)
 <br>  
 - The dictionary $W$ is the union of the tokens and their concatenation
 <br>  
-- $f(d_j,w)$ denotes the tf-idf of
-(compound) word $w$ in document $d_j$
+<!-- - $f(d_j,w)$ denotes the tf-idf of -->
+<!-- (compound) word $w$ in document $d_j$ -->
 
 </small>
 </div>
@@ -246,7 +246,7 @@ Using empirical considerations, for our corpus $\epsilon |W| = 100$
 ---------------------------------
 
 
-## Running Final STM with Covariate: Choosing $K$ {data-background="img/Run_Forrest.gif"}
+## Running Final STM with Covariates: $K$ {data-background="img/Run_Forrest.gif"}
 
 <br><br>
 
@@ -273,7 +273,7 @@ categories):
 
 ![](img/search_K.png)
 
-## Running Final STM with Covariate: Choosing $K$ {data-background="img/Run_Forrest.gif" data-background-transition="convex"}
+## Running Final STM with Covariates: $K$ {data-background="img/Run_Forrest.gif" data-background-transition="convex"}
 
 ![](img/search_K.png){width=60%}
 
