@@ -450,18 +450,15 @@ document.getElementsByTagName('head')[0].appendChild(style);
 
   <section data-background="img/myTitelBackground.gif">
   <h1 class="title">Multi-Word Structural Topic Modelling of ToR Drug Marketplaces</h1>
-    <h2 class="author"><div style="white-space: pre-line;">
-Stefano Guarino <sup><small>1</small></sup> and <ins>Mario Santoro</ins><sup><small>1, 2</small></sup>
-
-
-<small>1 - Istituto per le Applicazioni del Calcolo “Mauro Picone” - Consiglio Nazionale delle Ricerche</small>
-<small>2 - Dipartimento di Scienze Statistiche - Sapienza Università di Roma </small>
-<small><a href="mailto:m.santoro@iac.cnr.it">m.santoro@iac.cnr.it</a> - <a href="https://github.com/santoroma/">github.com/santoroma</a></small>
-<small>12th IEEE International Conference on Semantic Computing</small></div></h2>
+    <h2 class="author"><p>Stefano Guarino <sup><small>1</small></sup> and <ins>Mario Santoro</ins><sup><small>1, 2</small></sup></p>
+<p><small>1 - Istituto per le Applicazioni del Calcolo “Mauro Picone” - Consiglio Nazionale delle Ricerche</small><br />
+<small>2 - Dipartimento di Scienze Statistiche - Sapienza Università di Roma </small><br />
+<small><a href="mailto:m.santoro@iac.cnr.it">m.santoro@iac.cnr.it</a> - <a href="https://github.com/santoroma/">github.com/santoroma</a></small><br />
+<small>12th IEEE International Conference on Semantic Computing</small></p></h2>
 </section>
 
-<section id="just-a-summary" class="slide level2" data-background="img/mars.gif">
-<h2>Just a Summary</h2>
+<section id="outline" class="slide level2" data-background="img/mars.gif">
+<h1>Outline</h1>
 <ul>
 <li>Scope: Help Italian Investigators on ToR Drugs Marketplaces <br></li>
 <li><p>Using Topic Model:</p>
@@ -476,7 +473,7 @@ Stefano Guarino <sup><small>1</small></sup> and <ins>Mario Santoro</ins><sup><sm
 </ul>
 </section>
 <section><section id="scope-help-italian-investigators-on-tor-drugs-marketplaces" class="titleslide slide level1" data-background="img/sherlock_scope.gif"><h1>Scope: Help Italian Investigators on ToR Drugs Marketplaces</h1></section><section id="iancis-isec-project" class="slide level2" data-background="img/spiderman.gif">
-<h2>IANCIS ISEC Project</h2>
+<h1>IANCIS ISEC Project</h1>
 <p><small></p>
 <ul>
 <li>Indexing of Anonimous Networks for Crime Information Search <br><br />
@@ -499,7 +496,7 @@ Stefano Guarino <sup><small>1</small></sup> and <ins>Mario Santoro</ins><sup><sm
 <p></small></p>
 </section></section>
 <section><section id="our-choice-structural-topic-model-stm" class="titleslide slide level1" data-background="img/STM_Scheme.png" data-center="false"><h1>Our Choice: Structural Topic Model (STM)</h1></section><section id="structural-topic-model-stm" class="slide level2" data-background="img/STM_Scheme.png" data-background-position="bottom" data-background-size="30%">
-<h2>Structural Topic Model (STM)</h2>
+<h1>Structural Topic Model (STM)</h1>
 <!-- > Structural Topic Modelling is a recent extension to TM  -->
 <ul>
 <li class="fragment">STM allows incorporating tags, categories, metadata and other information accompanying the text archive <br><br />
@@ -525,7 +522,7 @@ Goal number 1
 <!-- </aside>   -->
 </section></section>
 <section><section id="bag-of-words-bow-recap" class="titleslide slide level1" data-background="img/BOW_2.gif"><h1>Bag Of Words (BOW) Recap</h1></section><section id="bag-of-words-bow-recap-1" class="slide level2" data-background="img/BOW_2.gif" data-background-position="right" data-background-size="10%">
-<h2>Bag Of Words (BOW) Recap</h2>
+<h1>Bag Of Words (BOW) Recap</h1>
 <p><small></p>
 <ul>
 <li class="fragment">Bag Of Words (BOW) paradigm: documents are viewed as a multisets of words, ignoring grammar and syntax <br><br />
@@ -547,7 +544,7 @@ Goal number 1
 <p></small></p>
 </section></section>
 <section><section id="our-extended-stm" class="titleslide slide level1" data-background="img/Extended_STM.gif"><h1>Our Extended STM</h1></section><section id="our-extended-stm-1" class="slide level2" data-background="img/Extended_STM.gif" data-background-position="right bottom" data-background-size="20%">
-<h2>Our Extended STM</h2>
+<h1>Our Extended STM</h1>
 <ul>
 <li class="fragment"><strong>The rationale</strong>: adding an idiom to the dictionary helps topics extraction and characterization only as long as the idiom and its components express different concepts that are relevant to different topics <br></li>
 <li class="fragment"><strong>In practice</strong>: standard STM without covariates modeling is iteratively used to detect topic-relevant token-pairs which are merged into a <strong>single extended_word</strong>, up to a moment when no more relevant compound terms emerge <br></li>
@@ -555,7 +552,7 @@ Goal number 1
 </ul>
 </section></section>
 <section><section id="the-algorithm" class="titleslide slide level1" data-background="img/Algorithm_ICSC_00_Overall.png" data-background-position="left" data-background-size="45%"><h1>The Algorithm</h1></section><section id="the-algorithm-running" class="slide level2" data-background="img/running.gif" data-background-position="right bottom" data-background-size="15%">
-<h2>The Algorithm (running…)</h2>
+<h1>The Algorithm (running…)</h1>
 <p><small></p>
 <ul>
 <li><span class="math inline">\(D = \{d_1, . . . , d_m\}\)</span> is our corpus of <span class="math inline">\(m\)</span> documents <br><br />
@@ -573,15 +570,14 @@ Goal number 1
 </ul>
 <p></small></p>
 </section><section id="the-algorithm-running-1" class="slide level2" data-background="img/running.gif" data-background-position="right bottom" data-background-size="15%">
-<h2>The Algorithm (running…)</h2>
+<h1>The Algorithm (running…)</h1>
 <div class="column" style="float:left; width: 50%">
 <p><small></p>
 <ul>
 <li>Given two consecutive tokens <span class="math inline">\(w_1\)</span> and <span class="math inline">\(w_2\)</span>, <span class="math inline">\(w_1\_w_2\)</span> denotes their concatenation (<span class="math inline">\(w_1\)</span> and/or <span class="math inline">\(w_2\)</span> may be the concatenation of any number of words) <br><br />
 </li>
 <li>The dictionary <span class="math inline">\(W\)</span> is the union of the tokens and their concatenation <br><br />
-</li>
-<li><span class="math inline">\(f(d_j,w)\)</span> denotes the tf-idf of (compound) word <span class="math inline">\(w\)</span> in document <span class="math inline">\(d_j\)</span></li>
+<!-- - $f(d_j,w)$ denotes the tf-idf of --> <!-- (compound) word $w$ in document $d_j$ --></li>
 </ul>
 <p></small></p>
 </div>
@@ -589,7 +585,7 @@ Goal number 1
 <p><br> <br> <img src="img/Algorithm_ICSC_01_BiGram.png" /></p>
 </div>
 </section><section id="the-algorithm-running-2" class="slide level2" data-background="img/running.gif" data-background-position="right bottom" data-background-size="15%">
-<h2>The Algorithm (running…)</h2>
+<h1>The Algorithm (running…)</h1>
 <p><img src="img/Algorithm_ICSC_02_STM.png" /> <small></p>
 <ul>
 <li>Let <span class="math inline">\(|W|\)</span> be the total number of tokens and <span class="math inline">\(|D|\)</span> the number of documents <br><br />
@@ -602,7 +598,7 @@ Goal number 1
 </ul>
 <p></small></p>
 </section><section id="the-algorithm-running-3" class="slide level2" data-background="img/running.gif" data-background-position="right bottom" data-background-size="15%">
-<h2>The Algorithm (running…)</h2>
+<h1>The Algorithm (running…)</h1>
 <div class="column" style="float:left; width: 50%">
 <p><br> Compound tokens selection <br><br> <small> Using empirical considerations for our corpus<br> <span class="math inline">\(p_{min} = 0.01\)</span>, <span class="math inline">\(FREX_{min} = 0.95\)</span> and then <br> <span class="math inline">\(s_{min} = p_{min} \cdot FREX_{min} = 9.5 \cdot 10^{-3}\)</span> </small> <br><br><br><br> Dictionary update</p>
 </div>
@@ -610,12 +606,12 @@ Goal number 1
 <p><img src="img/Algorithm_ICSC_03_BiGram_Selection.png" /> <img src="img/Algorithm_ICSC_04_Text_Update.png" /></p>
 </div>
 </section><section id="the-algorithm-end" class="slide level2" data-background="img/running_end.gif" data-background-position="bottom" data-background-size="25%">
-<h2>The Algorithm (…end)</h2>
+<h1>The Algorithm (…end)</h1>
 <p><img src="img/Algorithm_ICSC_05_END.png" /></p>
 <p>Using empirical considerations, for our corpus <span class="math inline">\(\epsilon |W| = 100\)</span></p>
 </section></section>
 <section><section id="results" class="titleslide slide level1" data-background="img/results02.gif"><h1>Results</h1></section><section id="our-corpus" class="slide level2" data-background="img/livraria-lello-stairs.jpg">
-<h2>Our Corpus</h2>
+<h1>Our Corpus</h1>
 <table style="width:50%;">
 <colgroup>
 <col style="width: 25%" />
@@ -650,8 +646,8 @@ Goal number 1
 </tr>
 </tbody>
 </table>
-</section><section id="running-final-stm-with-covariate-choosing-k" class="slide level2" data-background="img/Run_Forrest.gif">
-<h2>Running Final STM with Covariate: Choosing <span class="math inline">\(K\)</span></h2>
+</section><section id="running-final-stm-with-covariates-k" class="slide level2" data-background="img/Run_Forrest.gif">
+<h1>Running Final STM with Covariates: <span class="math inline">\(K\)</span></h1>
 <p><br><br></p>
 <p><small></p>
 <ul>
@@ -667,15 +663,15 @@ Goal number 1
 </ul>
 <p></small></p>
 </section><section id="section" class="slide level2" data-background="img/Run_Forrest.gif" data-background-transition="convex">
-<h2></h2>
+<h1></h1>
 <p><img src="img/search_K.png" /></p>
-</section><section id="running-final-stm-with-covariate-choosing-k-1" class="slide level2" data-background="img/Run_Forrest.gif" data-background-transition="convex">
-<h2>Running Final STM with Covariate: Choosing <span class="math inline">\(K\)</span></h2>
+</section><section id="running-final-stm-with-covariates-k-1" class="slide level2" data-background="img/Run_Forrest.gif" data-background-transition="convex">
+<h1>Running Final STM with Covariates: <span class="math inline">\(K\)</span></h1>
 <p><img src="img/search_K.png" style="width:60.0%" /></p>
 <p>We decided to set K = 65 as it seems to provide a reasonable trade-off among the four metrics</p>
 </section></section>
 <section><section id="section-1" class="titleslide slide level1" data-background="img/Breaking_Bad_Ice_Meth.png" data-background-transition="convex"><h1></h1></section><section id="topic-30-methamphetamine" class="slide level2" data-background="img/Breaking_Bad_None.png" data-background-transition="convex">
-<h2>Topic 30: Methamphetamine</h2>
+<h1>Topic 30: Methamphetamine</h1>
 <div class="column" style="float:left; width: 50%">
 <ul>
 <li><p>The highest score tokens were:</p>
@@ -701,7 +697,7 @@ Goal number 1
 </ul>
 </section></section>
 <section><section id="section-2" class="titleslide slide level1" data-background="img/Breaking_Bad_Hashish_Sativa.png" data-background-transition="convex"><h1></h1></section><section id="cannabis-and-hashish-topics" class="slide level2" data-background="img/Breaking_Bad_None.png" data-background-transition="convex">
-<h2>Cannabis and Hashish Topics</h2>
+<h1>Cannabis and Hashish Topics</h1>
 <p><small></p>
 <div class="column" style="float:left; width: 50%">
 <ul>
@@ -727,7 +723,7 @@ Goal number 1
 </div>
 </section></section>
 <section><section id="conclusions-and-future-works" class="titleslide slide level1" data-background="img/2001_ending.gif"><h1>Conclusions and Future Works</h1></section><section id="conclusions" class="slide level2" data-background="img/inception_end.gif">
-<h2>Conclusions</h2>
+<h1>Conclusions</h1>
 <ul>
 <li class="fragment">As an exploratory approach we opted for an ad-hoc heuristic based on iteratively apply standard STM to detect topic-relevant term-pairs and merge them into a single extended-word</li>
 </ul>
@@ -738,7 +734,7 @@ Goal number 1
 <li class="fragment">Through a fine-grained and cross-market analysis of the thematic organization of the corpus we were able to gain relevant information about drug trade on ToR that goes well beyond those provided by the already available high level content classification</li>
 </ul>
 </section><section id="future-works" class="slide level2" data-background="img/time_machine.gif">
-<h2>Future Works</h2>
+<h1>Future Works</h1>
 <ul>
 <li class="fragment">Extend the <em>a priori</em> joint distributions to the N-grams and to the skip-grams <br></li>
 <li class="fragment">Increase performances <br></li>
@@ -746,7 +742,7 @@ Goal number 1
 </ul>
 </section></section>
 <section><section id="this-is-the-end" class="titleslide slide level1" data-background="img/truman_show_end.gif"><h1>… this is the END</h1></section><section id="thanks" class="slide level2" data-background="img/truman_show_end.gif">
-<h2>THANKS!!!</h2>
+<h1>THANKS!!!</h1>
 <p><a href="http://github.com/santoroma/ICSC-2018_Presentation_82">github.com/santoroma/ICSC-2018_Presentation_82</a></p>
 </section></section>
     </div>
